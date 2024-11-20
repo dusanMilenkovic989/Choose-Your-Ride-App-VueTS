@@ -1,9 +1,4 @@
 /**
- * Dropdowns information API base part of the URL
- */
-const API_BASE_URL: string = import.meta.env.VITE_API_BASE_URL
-
-/**
  * Dropdowns information API token
  */
 const API_TOKEN: string = import.meta.env.VITE_API_TOKEN
@@ -50,9 +45,9 @@ const HTTP_HEADERS = {
  * Read-only collection of API endpoints used for getting the information for the dropdowns accross the app
  */
 const API_ENDPOINTS = {
-    buildYearsEndpoint: (): string => `${API_BASE_URL}/years/?token=${API_TOKEN}`,
-    buildMakesEndpoint: (year: string): string => `${API_BASE_URL}/makes/?year=${year}&token=${API_TOKEN}`,
-    buildModelsEndpoint: (year: string, make: string): string => `${API_BASE_URL}/models/?year=${year}&make=${make}&token=${API_TOKEN}`,
+    buildYearsEndpoint: (): string => `api/years/?token=${API_TOKEN}`,
+    buildMakesEndpoint: (year: string): string => `api/makes/?year=${year}&token=${API_TOKEN}`,
+    buildModelsEndpoint: (year: string, make: string): string => `api/models/?year=${year}&make=${make}&token=${API_TOKEN}`,
 } as const
 
 /**

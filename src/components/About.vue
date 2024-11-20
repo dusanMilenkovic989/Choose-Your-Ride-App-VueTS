@@ -12,6 +12,9 @@
         
         <p class="mt-4 mb-2"><strong>Greetings!</strong> Thank you for the opportunity to participate in the selection process. Here you can find some information about the things I did and things I did not.</p>
 
+        <p class="font-weight-bold mt-4 mb-2">Important: CORS policy handling</p>
+        <p class="mb-4">Since the CORS policy is strict on the API server, I used following ways of getting around it: in the development environment Vite is set up to use proxy, and in the production environment Netlify's proxy functions are utilized.</p>
+        
         <p class="font-weight-bold mt-4 mb-2">Scalability</p>
         <p class="mb-4">I tended to make this project as much future friendly as possible. I did not find the need to set up the application state using Pinia or some other tool, since the things that could be shared across composable functions, at the moment, would only clutter the App state if one was really necessary for a big app scaling, so I chose to define and pass around some extra parameters and arguments. I pulled all the constants into a single file, adhering to Single Source of Truth and No 'magic numbers' principles.</p>
 
